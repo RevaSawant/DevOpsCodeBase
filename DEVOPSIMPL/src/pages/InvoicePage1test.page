@@ -1,0 +1,29 @@
+<apex:page Controller="InvoiceController" showHeader="false" sidebar="false">
+<!-- c:HeaderComponent /-->
+<apex:form >
+
+  <apex:pageBlock >
+        <apex:pageBlockTable value="{!ListOfInvoices}" var="invoice">
+        <apex:column >
+         <apex:commandLink action="{!ViewLineItem}" value="{!invoice.Name}" reRender="lineitemblock">
+                            <apex:param value="{!invoice.id}" assignTo="{!InvoiceId}" name="InvId" /> 
+                            </apex:commandLink>
+                               <apex:outputPanel id="lineitemblock">
+          <apex:outputpanel rendered="{!lineItemList != null}">
+        <apex:pageblocktable value="{!lineItemList}" var="lineitem" >
+            <apex:column value="{!lineitem.name}"/>
+            <apex:column value="{!lineitem.Invoice__c}"/>
+            <apex:column value="{!lineitem.Quantity__c}"/>
+            <apex:column value="{!lineitem.Line_Item_Total__c}"/>
+            </apex:pageblocktable>
+            </apex:outputPanel>
+           </apex:outputpanel>     
+                             </apex:column>   
+            <apex:column value="{!invoice.Invoice_Total__c}" /> 
+            <apex:column value="{!invoice.Status__c}"/> 
+          
+        </apex:pageBlockTable><br/> <br/>  <br/>
+         
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
