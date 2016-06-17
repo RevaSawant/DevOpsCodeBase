@@ -7,7 +7,7 @@ public Id InvoiceId {get;set;}
   
   public InvoiceController () {
   clickSearch =true;
-  }
+  }   
   public list<Invoice__c> invoiceList{get;set;}
   public list<Line_Item__c> lineItemList{get;set;}
     
