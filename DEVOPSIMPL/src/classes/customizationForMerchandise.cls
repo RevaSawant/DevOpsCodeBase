@@ -9,7 +9,7 @@ public class customizationForMerchandise
     }
    
     public Merchandise__c getMerchandise() {
-        return merchandise;
+        return merchandise;   
     }
 
     Public String name{get;set;}
