@@ -4,7 +4,7 @@ public class customizationForMerchandise
     private final Merchandise__c merchandise;
 
 
-    public customizationForMerchandise(ApexPages.StandardController controller) {
+    public customizationForMerchandise(ApexPages.StandardController controller) { //test commit
 
     }
 
