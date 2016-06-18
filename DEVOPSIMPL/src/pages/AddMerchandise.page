@@ -9,7 +9,7 @@
     
     <apex:pageBlock title="Add A Merchandise" mode="edit">
       <apex:pageBlockButtons >
-        <apex:commandButton action="{!save}" value="Save"/>
+        <apex:commandButton action="{!save}" value="Save"/>   
         <apex:commandButton action="{!cancel}" value="Cancel"/>
       </apex:pageBlockButtons>
       <apex:pageBlockSection title="Merchanside Details Section" columns="2">

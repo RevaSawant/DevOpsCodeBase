@@ -14,7 +14,7 @@
             <apex:column value="{!lineitem.name}"/>
             <apex:column value="{!lineitem.Invoice__c}"/>
             <apex:column value="{!lineitem.Quantity__c}"/>
-            <apex:column value="{!lineitem.Line_Item_Total__c}"/>
+            <apex:column value="{!lineitem.Line_Item_Total__c}"/>   
             </apex:pageblocktable>
             </apex:outputPanel>
            </apex:outputpanel>     
