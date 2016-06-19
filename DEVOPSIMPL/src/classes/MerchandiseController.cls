@@ -5,7 +5,7 @@ public class MerchandiseController{
   public boolean clickSearch {get;set;}
   
   public MerchandiseController () {
-  clickSearch =true;
+  clickSearch =true;  
   }
     
       public List<Merchandise__c> getListOfMerchdise() {
