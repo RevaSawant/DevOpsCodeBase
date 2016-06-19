@@ -1,6 +1,6 @@
 <apex:page standardController="Merchandise__c" showHeader="false" sidebar="false" extensions="customizationForMerchandise">
   <apex:form >
-      
+       
   <apex:pageBlock title="Add A Merchandise" mode="edit">
      <apex:pageBlockSection title="Merchanside Details Section" columns="2">
         <apex:inputField value="{!Merchandise__c.name}"/><apex:commandButton action="{!SearchData}" value="Search"/>
