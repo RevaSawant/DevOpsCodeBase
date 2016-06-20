@@ -20,4 +20,4 @@
       </apex:pageBlockSection>
     </apex:pageBlock>
   </apex:form>
-</apex:page>
+</apex:page> <!-- simple test -->
