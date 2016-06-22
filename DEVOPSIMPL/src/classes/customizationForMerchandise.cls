@@ -7,7 +7,7 @@ public class customizationForMerchandise
     public customizationForMerchandise(ApexPages.StandardController controller) { //test commit
 
     }   
-   
+      
     public Merchandise__c getMerchandise() {
         return merchandise;   
     }
