@@ -5,7 +5,7 @@ public with sharing class WarehouseDataInstall {
     public static boolean getHasData() {
         return [SELECT Id from Merchandise__c].size() > 0;
     }
-    
+       
     public PageReference createData() {
         List<Merchandise__c> m = new List<Merchandise__c>();
         m.add(new Merchandise__c(Name='Laptop',Price__c=500,Quantity__c=1000));
