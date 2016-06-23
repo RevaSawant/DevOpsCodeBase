@@ -40,4 +40,21 @@ public with sharing class WarehouseDataInstall {
         System.assertEquals(true,WarehouseDataInstall.getHasData());
     }
 
+	public static void checkNestingIf(){
+		
+	Boolean t= true;
+		if(t)
+			{
+			
+			if(t)
+			{
+				if(t)
+				{
+					if(t)
+					{
+				}
+			}
+		}
+	}
+}
 }

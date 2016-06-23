@@ -31,4 +31,15 @@ public Id InvoiceId {get;set;}
     p.setRedirect(true);
     return p;
     }
+     public PageReference GetLineItem() {  
+    lineItemList = [select id,name,Quantity__c,Line_Item_Total__c,invoice__c from Line_Item__c ];
+        return null;
+    }
+    
+      public PageReference checkforDetails() {  
+      	
+    lineItemList = [select id,name,Quantity__c,Line_Item_Total__c,invoice__c from Line_Item__c ];
+        return null;
+    }
+    
 }

@@ -13,7 +13,7 @@
         <apex:commandButton action="{!cancel}" value="Cancel"/>
       </apex:pageBlockButtons>
       <apex:pageBlockSection title="Merchanside Details Section" columns="2">
-        <apex:inputField value="{!Merchandise__c.name}"/>
+       <b> <apex:inputField value="{!Merchandise__c.name}"/></b>
         <apex:inputField value="{!Merchandise__c.Price__c}"/>
         <apex:inputField value="{!Merchandise__c.Quantity__c}"/>
  
