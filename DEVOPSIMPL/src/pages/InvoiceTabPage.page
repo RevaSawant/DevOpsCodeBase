@@ -1,10 +1,11 @@
 <apex:page Controller="InvoiceController" showHeader="false" sidebar="false">
-<!-- c:HeaderComponent /-->
+
 <apex:form >
 
   <apex:pageBlock >
   <apex:commandbutton value="Back" action="{!BackToHome}" rendered="{!NOT(clickSearch)}"/>&nbsp;&nbsp;&nbsp;
-  <apex:inputText value="{!searchValue}"/>&nbsp;&nbsp;&nbsp; <apex:commandbutton value="Search" action="{!searchInvoice}"/><br/><br/>
+  <apex:inputText value="{!searchValue}"/>&nbsp;&nbsp;&nbsp; 
+  <apex:commandbutton value="Search" action="{!searchInvoice}"/><br/><br/>
   <apex:outputpanel rendered="{!clickSearch}">
         <apex:pageBlockTable value="{!ListOfInvoices}" var="invoice">
         <apex:column >
@@ -18,19 +19,19 @@
             
           
         </apex:pageBlockTable><br/> <br/>  <br/>
-          <apex:outputpanel id="lineitemblock">
+          <!--<apex:outputpanel id="lineitemblock">
         <apex:pageblocktable value="{!lineItemList}" var="lineitem" >
             <apex:column value="{!lineitem.name}"/>
             <apex:column value="{!lineitem.Invoice__c}"/>
             <apex:column value="{!lineitem.Quantity__c}"/>
             <apex:column value="{!lineitem.Line_Item_Total__c}"/>
             </apex:pageblocktable>
-            </apex:outputpanel> 
+            </apex:outputpanel> -->
            </apex:outputpanel>  
            
            
            <apex:outputpanel rendered="{!NOT(clickSearch)}">
-           <h2> Search Results </h2>
+           <h1> Search Results </h1>
            <apex:pageBlockTable value="{!searchInvoiceList}" var="searchList">
             <apex:column >
             <apex:outputLink value="{!URLFOR($Action.Invoice__c.View , searchList.Id)}">{!searchList.Name}
@@ -41,7 +42,7 @@
         </apex:pageBlockTable>
            </apex:outputpanel>
            <apex:outputpanel rendered="{!AND(NOT(clickSearch),searchInvoiceList.empty)}">
-        <h4> No Invoice Found. Please add the Invoice </h4><br/><br/>
+        <h2> No Invoice Found. Please add the Invoice </h2><br/><br/>
         <apex:commandbutton value="Add Invoice" action="{!URLFOR($Action.Invoice__c.New)}" />
         </apex:outputpanel>
     </apex:pageBlock>
