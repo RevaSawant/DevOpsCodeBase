@@ -11,7 +11,7 @@
         <apex:column >
          <apex:commandLink action="{!ViewLineItem}" value="{!invoice.Name}" reRender="lineitemblock">
                             <apex:param value="{!invoice.id}" assignTo="{!InvoiceId}" name="InvId" /> 
-                            </apex:commandLink>
+                            </apex:commandLink> <!-- Test -->
                                  
                              </apex:column>   
             <apex:column value="{!invoice.Invoice_Total__c}"/> 
