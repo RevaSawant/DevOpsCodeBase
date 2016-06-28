@@ -42,5 +42,5 @@ public Id InvoiceId {get;set;}
         return null;
     }
     
-    public void save() { }
+
 }

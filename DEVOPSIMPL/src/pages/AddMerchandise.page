@@ -22,4 +22,7 @@ sidebar="false" extensions="customizationForMerchandise">
       </apex:pageBlockSection>
     </apex:pageBlock>
   </apex:form>
+  
 </apex:page>
+
+<!--  test comments -->
